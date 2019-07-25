@@ -5,11 +5,10 @@
 /* ------------------------------------------------------------------ */
 
 body {
-	background: #FFFFFF;
-	font-family: 'Playfair Display', serif;
+  background: #ffffff;
+  font-family: 'Playfair Display', serif;
   margin: 0;
 }
-
 
 /* ------------------------------------------------------------------ */
 /* Grid
@@ -20,82 +19,146 @@ body {
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 .column,
 .columns {
   width: 100%;
   float: left;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /* For devices larger than 400px */
 @media (min-width: 400px) {
   .container {
     width: 85%;
-    padding: 0; }
+    padding: 0;
+  }
 }
 
 /* For devices larger than 550px */
 @media (min-width: 550px) {
   .container {
-    width: 80%; }
+    width: 80%;
+  }
   .column,
   .columns {
-    margin-left: 4%; }
+    margin-left: 4%;
+  }
   .column:first-child,
   .columns:first-child {
-    margin-left: 0; }
+    margin-left: 0;
+  }
 
   .one.column,
-  .one.columns                    { width: 4.66666666667%; }
-  .two.columns                    { width: 13.3333333333%; }
-  .three.columns                  { width: 22%;            }
-  .four.columns                   { width: 30.6666666667%; }
-  .five.columns                   { width: 39.3333333333%; }
-  .six.columns                    { width: 48%;            }
-  .seven.columns                  { width: 56.6666666667%; }
-  .eight.columns                  { width: 65.3333333333%; }
-  .nine.columns                   { width: 74.0%;          }
-  .ten.columns                    { width: 82.6666666667%; }
-  .eleven.columns                 { width: 91.3333333333%; }
-  .twelve.columns                 { width: 100%; margin-left: 0; }
+  .one.columns {
+    width: 4.66666666667%;
+  }
+  .two.columns {
+    width: 13.3333333333%;
+  }
+  .three.columns {
+    width: 22%;
+  }
+  .four.columns {
+    width: 30.6666666667%;
+  }
+  .five.columns {
+    width: 39.3333333333%;
+  }
+  .six.columns {
+    width: 48%;
+  }
+  .seven.columns {
+    width: 56.6666666667%;
+  }
+  .eight.columns {
+    width: 65.3333333333%;
+  }
+  .nine.columns {
+    width: 74%;
+  }
+  .ten.columns {
+    width: 82.6666666667%;
+  }
+  .eleven.columns {
+    width: 91.3333333333%;
+  }
+  .twelve.columns {
+    width: 100%;
+    margin-left: 0;
+  }
 
-  .one-third.column               { width: 30.6666666667%; }
-  .two-thirds.column              { width: 65.3333333333%; }
+  .one-third.column {
+    width: 30.6666666667%;
+  }
+  .two-thirds.column {
+    width: 65.3333333333%;
+  }
 
-  .one-half.column                { width: 48%; }
+  .one-half.column {
+    width: 48%;
+  }
 
   /* Offsets */
   .offset-by-one.column,
-  .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .offset-by-one.columns {
+    margin-left: 8.66666666667%;
+  }
   .offset-by-two.column,
-  .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .offset-by-two.columns {
+    margin-left: 17.3333333333%;
+  }
   .offset-by-three.column,
-  .offset-by-three.columns        { margin-left: 26%;            }
+  .offset-by-three.columns {
+    margin-left: 26%;
+  }
   .offset-by-four.column,
-  .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .offset-by-four.columns {
+    margin-left: 34.6666666667%;
+  }
   .offset-by-five.column,
-  .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .offset-by-five.columns {
+    margin-left: 43.3333333333%;
+  }
   .offset-by-six.column,
-  .offset-by-six.columns          { margin-left: 52%;            }
+  .offset-by-six.columns {
+    margin-left: 52%;
+  }
   .offset-by-seven.column,
-  .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .offset-by-seven.columns {
+    margin-left: 60.6666666667%;
+  }
   .offset-by-eight.column,
-  .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .offset-by-eight.columns {
+    margin-left: 69.3333333333%;
+  }
   .offset-by-nine.column,
-  .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .offset-by-nine.columns {
+    margin-left: 78%;
+  }
   .offset-by-ten.column,
-  .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .offset-by-ten.columns {
+    margin-left: 86.6666666667%;
+  }
   .offset-by-eleven.column,
-  .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+  .offset-by-eleven.columns {
+    margin-left: 95.3333333333%;
+  }
 
   .offset-by-one-third.column,
-  .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .offset-by-one-third.columns {
+    margin-left: 34.6666666667%;
+  }
   .offset-by-two-thirds.column,
-  .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+  .offset-by-two-thirds.columns {
+    margin-left: 69.3333333333%;
+  }
 
   .offset-by-one-half.column,
-  .offset-by-one-half.columns     { margin-left: 52%; }
-
+  .offset-by-one-half.columns {
+    margin-left: 52%;
+  }
 }
 
 /* ------------------------------------------------------------------ */
@@ -105,84 +168,90 @@ body {
 .container:after,
 .row:after,
 .u-cf {
-  content: "";
+  content: '';
   display: table;
-  clear: both; }
+  clear: both;
+}
 
 /* ------------------------------------------------------------------ */
 /* Typography
 /* ------------------------------------------------------------------ */
-h1, h2, h3, h4, h5, h6 {
- font-family: 'Fjalla One', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Fjalla One', sans-serif;
   margin-top: 0;
   margin-bottom: 2rem;
-  font-weight: 300; }
+  font-weight: 300;
+}
 
 img {
-	width: 100%;
-	height: auto;
-}	
+  width: 100%;
+  height: auto;
+}
 /* ------------------------------------------------------------------ */
 /* Header Styles
 /* ------------------------------------------------------------------ */
 
 header {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
-	justify-content: center;
- width: 100%;
-	height: 100vh;
-	background: #EE6A5B url(https://jeffbredenkamp.neocities.org/bg01.gif);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: #f6d802;
 }
 
 .title {
-	-webkit-align-self: center;
-	-ms-flex-item-align: center;
-	align-self: center;
-	padding: 2rem;
-	max-width: 960px;
-	text-align: center;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 2rem;
+  max-width: 960px;
+  text-align: center;
 }
 
 .title h1 {
-	color: #FFF;
-	font-weight: 900;
-	letter-spacing: 0px;
-	text-transform: uppercase;
-	font-size: 150px;
+  color: #151009;
+  font-weight: 900;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  font-size: 150px;
 }
 
 .title p {
-	color: #1e1a1b;
-	text-transform: lowercase;
-	font-style: italic;
-	font-weight: 400;
-	font-size: 30px;
-	left: 0;
-	width: 100%;
+  color: #1e1a1b;
+  text-transform: lowercase;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 30px;
+  left: 0;
+  width: 100%;
 }
 
 .title hr {
-	border: 3px solid #ffffff;
-	width: 50%;
-	margin-top: 40px;
-	margin-bottom: 40px;
+  border: 3px solid #151009;
+  width: 50%;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
-@media only screen and (max-width:768px) {
-.title h1 {
-	font-size: 80px;
-}
+@media only screen and (max-width: 768px) {
+  .title h1 {
+    font-size: 80px;
+  }
 
-.title p {
-	font-size: 20px;
-}
-
+  .title p {
+    font-size: 20px;
+  }
 }
 
 /* ------------------------------------------------------------------ */
@@ -190,274 +259,272 @@ header {
 /* ------------------------------------------------------------------ */
 
 #about {
-	padding-top: 96px;
-	padding-bottom: 66px;
-	overflow: hidden;
-	border-bottom-color: #E8E8EE;
-	border-bottom-width: 3px;
-	border-bottom-style: solid;
-	padding: 50px 0 10px;
+  padding-top: 96px;
+  padding-bottom: 66px;
+  overflow: hidden;
+  border-bottom-color: #e8e8ee;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  padding: 50px 0 10px;
 }
 #about h1 {
-	color: #1e1a1b;
-	line-height: 1.25em;
-	font-size: 100px;
-	margin-right: auto;
-	margin-left: auto;
+  color: #1e1a1b;
+  line-height: 1.25em;
+  font-size: 100px;
+  margin-right: auto;
+  margin-left: auto;
 }
 #about p {
-	color: #1e1a1b;
-	line-height: 1.75em;
-	font-size: 34px;
+  color: #1e1a1b;
+  line-height: 1.75em;
+  font-size: 34px;
 }
 #about p {
-	margin-top: 20px;
-	margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-@media only screen and (max-width:768px) {
-#about h1 {
-	text-align: left;
-	color: #1e1a1b;
-	line-height: 1.25em;
-	font-size: 54px;
-	margin-right: auto;
-	margin-left: auto;
-}
-#about p {
-	line-height: 1.75em;
-	padding-top: 6%;
-	font-size: 20px;
-}
+@media only screen and (max-width: 768px) {
+  #about h1 {
+    text-align: left;
+    color: #1e1a1b;
+    line-height: 1.25em;
+    font-size: 54px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #about p {
+    line-height: 1.75em;
+    padding-top: 6%;
+    font-size: 20px;
+  }
 }
 /* ------------------------------------------------------------------ */
 /* Formula Section
 /* ------------------------------------------------------------------ */
 
 #formula {
-	padding: 50px 0 10px;
-	overflow: hidden;
-	border-bottom-color: #E8E8EE;
-	border-bottom-width: 3px;
-	border-bottom-style: solid;
+  padding: 50px 0 10px;
+  overflow: hidden;
+  border-bottom-color: #e8e8ee;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
 }
 #formula h1 {
-	color: #999;
-	line-height: 1em;
-	letter-spacing: 0px;
-	font-weight: bold;
-	text-transform: uppercase;
-	font-size: 230px;
-	margin-top: 25px;
-	margin-bottom: 30px;
-	;
+  color: #999;
+  line-height: 1em;
+  letter-spacing: 0px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 230px;
+  margin-top: 25px;
+  margin-bottom: 30px;
 }
 #formula p {
-	width: 100%;
-	text-align: center;
-	font-weight: bold;
-	color: #1e1a1b;
-	text-transform: uppercase;
-	line-height: 2.25em;
-	letter-spacing: 2px;
-	font-size: 28px;
-	margin-top: 20px;
-	border-bottom-color: #1e1a1b;
-	border-bottom-width: 4px;
-	border-bottom-style: solid;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: #1e1a1b;
+  text-transform: uppercase;
+  line-height: 2.25em;
+  letter-spacing: 2px;
+  font-size: 28px;
+  margin-top: 20px;
+  border-bottom-color: #1e1a1b;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
 }
 
-@media only screen and (max-width:768px) {
-#formula h1 {
-	font-size: 100px;
-}
-#formula p {
-	font-size: 20px;
-}
+@media only screen and (max-width: 768px) {
+  #formula h1 {
+    font-size: 100px;
+  }
+  #formula p {
+    font-size: 20px;
+  }
 }
 /* ------------------------------------------------------------------ */
 /* Section Four
 /* ------------------------------------------------------------------ */
 
 #sectionfour {
-	padding: 50px 0 10px;
+  padding: 50px 0 10px;
 }
 
 #sectionfour h1 {
-	color: #1e1a1b;
-	font-size: 55px;
-	margin-bottom: 40px;
+  color: #1e1a1b;
+  font-size: 55px;
+  margin-bottom: 40px;
 }
 #sectionfour p {
-	color: #1e1a1b;
-	line-height: 2em;
-	font-size: 24px;
-	margin-top: 40px;
+  color: #1e1a1b;
+  line-height: 2em;
+  font-size: 24px;
+  margin-top: 40px;
 }
 
-@media only screen and (min-width:768px) {
-#sectionfour h1 {
-	font-size: 50px;
-}
+@media only screen and (min-width: 768px) {
+  #sectionfour h1 {
+    font-size: 50px;
+  }
 }
 /* ------------------------------------------------------------------ */
 /* Brewing Process Section
 /* ------------------------------------------------------------------ */
 
 #Brewingsection {
-	padding: 50px 0 10px;
-	border-bottom-color: #E8E8EE;
-	border-bottom-width: 3px;
-	border-bottom-style: solid;
+  padding: 50px 0 10px;
+  border-bottom-color: #e8e8ee;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
 }
 #brewing .selection {
-	margin: 0px auto;
-	width: 100%;
-	position: relative;
+  margin: 0px auto;
+  width: 100%;
+  position: relative;
 }
 #brewing h1 {
-	color: #EE6A5B;
-	letter-spacing: 15px;
-	font-size: 180px;
-	font-weight: 800;
-	text-transform: uppercase;
+  color: #f6d802;
+  letter-spacing: 15px;
+  font-size: 180px;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 #brewing p {
-	color: #1e1a1b;
-	font-size: 28px;
+  color: #1e1a1b;
+  font-size: 28px;
 }
 
-@media only screen and (max-width:768px) {
-#brewing h1 {
-	font-size: 80px;
-}
+@media only screen and (max-width: 768px) {
+  #brewing h1 {
+    font-size: 80px;
+  }
 }
 
-@media only screen and (min-width:768px) {
-#brewing .selection {
-	margin: 0px auto;
-	width: 500px;
-	position: relative;
-}
-#brewing .first {
-	margin-left: 0%;
-}
-#brewing .second {
-	margin-left: 50%;
-}
-#brewing .third {
-	margin-left: 0%;
-}
-#brewing .fourth {
-	margin-left: 50%;
-}
-#twentyone .secondfont {
-	font-size: 2.5em;
-}
-#brewing .position {
-	left: 0px;
-	top: 25px;
-	right: 0px;
-	margin-right: auto;
-	margin-left: auto;
-	position: absolute;
-}
+@media only screen and (min-width: 768px) {
+  #brewing .selection {
+    margin: 0px auto;
+    width: 500px;
+    position: relative;
+  }
+  #brewing .first {
+    margin-left: 0%;
+  }
+  #brewing .second {
+    margin-left: 50%;
+  }
+  #brewing .third {
+    margin-left: 0%;
+  }
+  #brewing .fourth {
+    margin-left: 50%;
+  }
+  #twentyone .secondfont {
+    font-size: 2.5em;
+  }
+  #brewing .position {
+    left: 0px;
+    top: 25px;
+    right: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    position: absolute;
+  }
 }
 /* ------------------------------------------------------------------ */
 /* Reviews Section
 /* ------------------------------------------------------------------ */
 
-#reviews{
-	background-position: center;
-	padding: 15rem 0px 12rem;
-	background-image: url(https://jeffbredenkamp.neocities.org/reviewbg.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-	padding: 0px 0 0px;
-	min-height: 500px;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
-	justify-content: center;
- width: 100%%;
+#reviews {
+  background-position: center;
+  padding: 15rem 0px 12rem;
+  background-image: url(https://jeffbredenkamp.neocities.org/reviewbg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0px 0 0px;
+  min-height: 500px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%%;
 }
 
 .content {
-	-webkit-align-self: center;
-	-ms-flex-item-align: center;
-	align-self: center;
-	text-align: center;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  text-align: center;
 }
 
-
 .content h2 {
-	margin: 0 auto;
-	width: 50%;
-	text-align: center;
-	color: #EE6A5B;
-	line-height: 1.35em;
-	font-size: 46px;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+  color: #f6d802;
+  line-height: 1.35em;
+  font-size: 46px;
 }
 .content p {
-	width: 50%;
-	text-align: center;
-	color: #EE6A5B;
-	text-transform: uppercase;
-	line-height: 1.75em;
-	letter-spacing: 5px;
-	padding-top: 30px;
-	font-size: 0.85em;
-	font-style: italic;
-	margin-top: 75px;
-	margin: 0 auto;
-	border-top-color: #1e1a1b;
-	border-top-width: 3px;
-	border-top-style: solid;
+  width: 50%;
+  text-align: center;
+  color: #f6d802;
+  text-transform: uppercase;
+  line-height: 1.75em;
+  letter-spacing: 5px;
+  padding-top: 30px;
+  font-size: 0.85em;
+  font-style: italic;
+  margin-top: 75px;
+  margin: 0 auto;
+  border-top-color: #1e1a1b;
+  border-top-width: 3px;
+  border-top-style: solid;
 }
 
-@media only screen and (max-width:768px) {
-.content h2 {
-	font-size: 28px;
-}
+@media only screen and (max-width: 768px) {
+  .content h2 {
+    font-size: 28px;
+  }
 }
 /* ------------------------------------------------------------------ */
 /* Footer Section
 /* ------------------------------------------------------------------ */
 
 footer {
-	padding-top: 48px;
-	background-color: #333;
-	color: #303030;
-	font-size: 14px;
-	text-align: center;
-	position: relative;
-	padding-bottom: 50px;
+  padding-top: 48px;
+  background-color: #333;
+  color: #303030;
+  font-size: 14px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 50px;
 }
 footer h2 {
-	text-align: center;
-	color: #EE6A5B;
-	line-height: 1.2em;
-	letter-spacing: 6px;
-	text-transform: uppercase;
-	font-size: 28px;
+  text-align: center;
+  color: #f6d802;
+  line-height: 1.2em;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  font-size: 28px;
 }
 footer p {
-	text-align: center;
-	color: #999;
-	line-height: 3em;
-	letter-spacing: 2px;
-	font-size: 1em;
-	margin-top: 20px;
+  text-align: center;
+  color: #999;
+  line-height: 3em;
+  letter-spacing: 2px;
+  font-size: 1em;
+  margin-top: 20px;
 }
 /* ------------------------------------------------------------------ */
 /* General Styles
 /* ------------------------------------------------------------------ */
 
 hr {
-	border: 3px solid #EE6A5B;
-	border-image: none;
+  border: 3px solid #f6d802;
+  border-image: none;
 }
