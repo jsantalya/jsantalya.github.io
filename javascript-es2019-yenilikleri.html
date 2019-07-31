@@ -8,6 +8,17 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css' />
   <link rel="stylesheet" href="./style.css" />
+
+  <meta property="og:title" content="ES2019 Yenilikleri" />
+  <meta property="og:description" content="" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://antalya.js.org/javascript-es2019-yenilikleri.html" />
+
+  <meta property="og:updated_time" content="2019-04-13T00:00:00&#43;00:00" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="ES2019 Yenilikleri" />
+  <meta name="twitter:description" content="Bildiğiniz gibi artık Javascript'in yeni versiyonları Ecmascript olarak anılıyor, devamlı geliştiriliyor ve her sene yeni versiyon alarak iterate oluyor." />
+  <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/471691009730961409/eGlU2F1W_400x400.png">
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -35,7 +46,7 @@
     Nedir ?
   </h1>
   <hr>
-  <strong>Mehmet Köse</strong>
+  <strong>ES2019 Yenilikleri</strong>
 </div>
 <div class="six columns">
   <p>Bildiğiniz gibi artık Javascript'in yeni versiyonları <strong>Ecmascript</strong> olarak anılıyor, devamlı geliştiriliyor ve her sene yeni versiyon alarak iterate oluyor.</strong></p>
@@ -89,15 +100,64 @@
               const arr4 = [1, 2, , 4, 5];
               arr4.flat(); // [1, 2, 4, 5]
           </pre>
-     
-      </div>
+
+
+
+
+
+
+
+
+          <h2><strong>Array.flatMap()</strong></h2>
+
+          <p>
+            Bu method da adından anlaşılabileceği gibi, flat ve map'i birleştirmiş. 
+            Temelde, verilen <strong>iterable</strong>'ı <strong>1</strong> kademe düzleştirip elemanlarla bir işlem yapıp, sonucu yine array olarak döndüren bir çözüm.
+            Yine bunu da methodları hooklayarak yapabilirdik aslında ama, 2 özelliği birleştirerek native bir çözüm sunmaları güzel olmuş. 
+            Büyük miktarda verinin stream edildiği ve işlendiği senaryolarda kullanışlı olabilir.
+          </p>
+
+          <pre>
+              const arr1 = [1, 2, 3];
+
+              arr1.map(x => [x * 4]); // [[4], [8], [12]]
+              arr1.flatMap(x => [x * 4]); // [4, 8, 12]
+          </pre>
+
+          <p>Gerçek hayattan güzel bir kullanım örneği</p>
+
+          <pre>
+              const sentence = ["This is a", "regular", "sentence"];
+
+              sentence.map(x => x.split(" ")); // [["This","is","a"],["regular"],["sentence"]]
+              sentence.flatMap(x => x.split(" ")); // ["This","is","a","regular", "sentence"]
+          </pre>
+
+
+
+
+
+
+
+
+          <h2><strong>String.trimStart() ve String.trimEnd()</strong></h2>
+          <p>Trim zaten elimizde olan bir özellikti, bu arkadaşlar da her iki taraftan değil de, tercih edilen taraftan boşluk karakterini traşlamayı sağlıyor</p>
+      
+          <pre>
+              const test = " hello ";
+
+              test.trim(); // "hello";
+              test.trimStart(); // "hello ";
+              test.trimEnd(); // " hello";
+          </pre>
+      
+      
+        </div>
+
     </div>
 </section>
 
 
-
-<!-- Footer
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 <footer>
   <div class="row">
