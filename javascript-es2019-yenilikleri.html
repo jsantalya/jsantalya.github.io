@@ -16,14 +16,12 @@
 
   <meta property="og:updated_time" content="2019-04-13T00:00:00&#43;00:00" />
   <meta name="twitter:card" content="summary" />
+  <meta name="twitter:creator" content="@mehmetkose">
   <meta name="twitter:title" content="ES2019 Yenilikleri" />
   <meta name="twitter:description" content="Bildiğiniz gibi artık Javascript'in yeni versiyonları Ecmascript olarak anılıyor, devamlı geliştiriliyor ve her sene yeni versiyon alarak iterate oluyor." />
   <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/471691009730961409/eGlU2F1W_400x400.png">
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<!-- Header
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 <header>
   <div class="title">
@@ -35,8 +33,6 @@
   </div>
 </header>
 
-<!-- About Section
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 <section id="about">
 <div class="container">
@@ -55,8 +51,6 @@
 
 
 
-<!-- Another Section
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <section id="sectionfour">
   <div class="container">
     <div class="twelve columns">
@@ -103,11 +97,6 @@
 
 
 
-
-
-
-
-
           <h2><strong>Array.flatMap()</strong></h2>
 
           <p>
@@ -150,7 +139,89 @@
               test.trimStart(); // "hello ";
               test.trimEnd(); // " hello";
           </pre>
-      
+
+
+
+
+          <h2><strong>Object.fromEntries</strong></h2>
+
+          <p>
+            Şimdi bu basit gibi gözükebilir ama bence oldukça faydalı bir özellik.
+            Özellikle program akışı sırasında map/reduce/filter gibi güzellikleri kullanmak için veriyi array'e çevirmek veya array'de tutmak, 
+            ama günün sonunda display ederken de objeye çevirmek isteyebiliyoruz.
+            Bu tarz ihtiyaçlar için çok güzel bir özellik.
+            Temelde, array içindeki ikili arrayleri objeye çevirmeye yarıyor.
+
+          </p>
+
+          <pre>
+            // mesela şunun gibi bir şeyi
+            const array = [["prop1", 2], ["prop2", 10], ["prop3", 25]]
+            // bu şekilde objeye çevirebiliyoruz
+            const newObj = Object.fromEntries(array);
+            // {prop1: 2, prop2: 10, prop3: 25}
+          </pre>
+
+
+
+
+
+          <h2><strong>Optional Catch Binding</strong></h2>
+
+          <p>
+            Açıkcası böyle bir kullanım zaten var sanıyordum, yeni gelmiş. Catch error objesi almak zorunda değil.
+          </p>
+
+          <pre>
+              try {
+                //...
+              } catch (er) {
+                //handle error with parameter er
+              }
+              
+              try {
+                //...
+              } catch {
+                //handle error without parameter
+              }
+          </pre>
+
+
+
+
+          <h2><strong>Symbol.description</strong></h2>
+
+          <p>Symbol objesi read-only description property'e kavuşmuş.</p>
+          <pre>
+              const testSymbol = Symbol("Desc");
+
+              testSymbol.description; // "Desc"
+          </pre>
+
+
+
+
+
+
+          <h2><strong>Function.toString()</strong></h2>
+
+          <p>Fonksiyonlar toString methoduyla tanımlandığı gibi gerçek kodu döndürüyor string olarak.</p>
+          <p>How cool is that! huh?</p>
+          <pre>
+              function /* foo comment */ foo() {}
+
+              foo.toString(); // "function foo() {}"
+          </pre>
+
+
+
+            <h2><strong>JSON.parse() improvements</strong></h2>
+
+          <p>
+            Syntax bölümleyicisi (\u2028) ve  (\u2029) sembolleriyle 
+            daha iyi çalışıp SyntaxError'e sebeb olmuyormuş. 
+            Bu konu hakkında fazla deneyimim yok. Ama kulağa güzel geliyor :)
+          </p>   
       
         </div>
 
@@ -183,7 +254,6 @@
     </div>
   </div>
 </footer>
-<!-- partial -->
   
 </body>
 </html>
