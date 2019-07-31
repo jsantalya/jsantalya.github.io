@@ -528,3 +528,10 @@ hr {
   border: 3px solid #f6d802;
   border-image: none;
 }
+
+pre {
+  width: 100%;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+}
