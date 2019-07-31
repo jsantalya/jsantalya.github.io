@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>JS Antalya Geliştirici Topluluğu</title>
+  <title>ES2019 Yenilikleri - JS Antalya</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,9 +51,44 @@
     <div class="twelve columns">
           <h1>Bu Senenin Yenilikleri</h1>
           <hr>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        
+          <h2><strong>Array.flat()</strong></h2>
+          <p>Array objesi artık flat methodunu destekliyor. Yani iç içe geçmiş arrayleri düzleştirebileceğiz.</p>
+          <p>
+            Yalnız methodun derinlik bilgisini parametre olarak aldığını unutmayın. 
+            Default değer <strong>1</strong>
+            Yani eğer default bir şey vermezseniz <strong>1</strong> kademe derinliğe inip, array'i düzleştiriyor.
+          </p>
+
+          <pre>
+              const arr1 = [1, 2, [3, 4]];
+              arr1.flat(); // [1, 2, 3, 4]
+          </pre>
+
+          <p>
+            Fakat tabiki de kaç kademe derinliğe inileceğini söyleyebiliyorsunuz
+          </p>
+          <pre>
+              const arr2 = [1, 2, [3, 4, [5, 6]]];
+              arr2.flat(2); // [1, 2, 3, 4, 5, 6]
+              
+          </pre>
+
+          <p>
+            Veya elinizde böyle bir bilgi yoksa, sonsuz sayıda düzleştirme yap da diyebilirsiniz. Array büyükse performansın sürüneceğinden emin olabiliriz.
+            Yine de 3. parti paketler kullanmaktan iyidir tabiki native bir özellik kullanmak. Severiz.
+          </p>
+
+          <pre>
+              const arr3 = [1, 2, [3, 4, [5, 6, [7, 8]]]];
+              arr3.flat(Infinity); // [1, 2, 3, 4, 5, 6, 7, 8]
+              
+          </pre>
+
+          <p>Ufak bir detay: Eğer array'inizin içinde boş bir eleman varsa <strong>flat</strong> bunu yok edecektir.</p>
+          <pre>
+              const arr4 = [1, 2, , 4, 5];
+              arr4.flat(); // [1, 2, 4, 5]
+          </pre>
      
       </div>
     </div>
@@ -69,24 +104,21 @@
     <div class="container">
       <div class="four columns">
         <h2>Contact Us</h2>
-        <p><em>+44 1908 254 165</em></p>
+        <p><em>null</em></p>
         <hr>
-        <p>456 Strawberry Lane <br>
-          Mableton<br>
-          GA 30126</p>
       </div>
       <div class="four columns">
         <h2>Opening Times</h2>
-        <p><em>Mon - Fri 09:00 to 20:00</em></p>
+        <p><em>null</em></p>
         <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-      </div>
+        
+        </div>
       <div class="four columns">
         <h2>Social Media</h2>
         <p><em>Follow Us</em></p>
         <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.<br>
-        </p>
+        <p>
+         null</p>
       </div>
     </div>
   </div>
