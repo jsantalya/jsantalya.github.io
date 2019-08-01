@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>JS Antalya Developer Community</title>
+    <meta name="description" content="Antalya Javascript Community" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -12,6 +13,21 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css"
     />
     <link rel="stylesheet" href="./style.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "WebPage",
+        "name": "JS Antalya Developer Community",
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "xpath": [
+            "/html/head/title",
+            "/html/head/meta[@name='description']/@content"
+          ]
+        },
+        "url": "https://antalya.js.org"
+      }
+    </script>
   </head>
   <body>
     <header>
