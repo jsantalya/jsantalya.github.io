@@ -47,8 +47,8 @@
 </div>
 <div class="six columns">
   <p>
-    React'ın 16.versiyonu, 2017 yılı içinde yayınlandı, 
-    bu yazının hazırlandığı günlerde (Ağustos 2019) 16.8.6 sürümü mevcut. 
+    React'ın 16.versiyonu, 2017 yılı içinde yayınlandı. 
+    Bu yazının hazırlandığı günlerde (Ağustos 2019) 16.8.6 sürümü mevcut. 
     React 16 geriye dönük destek sunmakla birlikte bir çok yenilikle geldi ve 
     günümüzde de geliştiricilerin adapte olma süreci devam etmektedir.
   </p>
@@ -66,7 +66,7 @@
           <p>React bir UI kütüphanesi ve UI akışında meydana gelen bir hata aslında uygulamayı <strong>kırmaması</strong> gerekir.</p>
           <p>
             Evet yazdığımız kodun düzgün çalışmasından ve hata ayıklama mekanizmalarından biz sorumluyuz, 
-            evet bunun için bizi önceden uyaran yardımcı yazılımlar bile var, fakat hata bu işin doğasında var ve 
+            evet bunun için bizi önceden uyaran yardımcı yazılımlar bile var. Fakat hata bu işin doğasında var ve 
             o hata gerçekleşecek. Bundan emin olabilirsiniz.
           </p>
 
@@ -81,7 +81,7 @@
 
           <p>Örneği oynatalım <strong>Uğurcum</strong></p>
 
-          <pre>
+          <pre><code>
               class HatasizKulOlmaz extends React.Component {
                 constructor(props) {
                   super(props);
@@ -103,20 +103,21 @@
                   return this.props.children;
                 }
               }
-          </pre>
+          </code></pre>
 
           <p>
             Aslında lafı çok da dolandırmaya gerek yoktu. Örnek her şeyi anlatıyor. 
             Dikkatinizi çekmesi gereken nokta ise, bu component tüm <strong>Component Tree</strong>
             içinde gerçekleşen hataları yakalayabiliyor. 
-            Yani bunu örneğin <strong>app.js</strong>içinde kbir wrapper olarak kullanıp tüm hataları yakalayabilirsiniz.
+            Yani bunu örneğin <strong>app.js</strong> içinde bir wrapper olarak kullanıp 
+            alt componentlarda gerçekleşen tüm hataları da yakalayabilirsiniz.
           </p>
 
-          <pre>
+          <pre><code></code>
               <HatasizKulOlmaz>
                 <Liste />
               </HatasizKulOlmaz>
-          </pre>
+          </code></pre>
 
 
           <p>Bir sonraki yazıda görüşmek üzere.</p>
