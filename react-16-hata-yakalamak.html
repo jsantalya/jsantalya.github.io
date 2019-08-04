@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="tr" >
+<head>
+  <meta charset="UTF-8">
+  <title>React 16'da Hata Yakalamak - JS Antalya</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="canonical" href="https://antalya.js.org/javascript-es2019-yenilikleri.html" />
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css' />
+  <link rel="stylesheet" href="./style.css" />
+
+  <meta property="og:title" content="React 16'da Hata Yakalamak" />
+  <meta property="og:description" content="" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://antalya.js.org/javascript-es2019-yenilikleri.html" />
+
+  <meta property="og:updated_time" content="2019-04-13T00:00:00&#43;00:00" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:creator" content="@mehmetkose">
+  <meta name="twitter:title" content="React 16'da Hata Yakalamak" />
+  <meta name="twitter:description" content="Yazdığınız React Component'larında oluşan hataları bir lifecycle methodu ile yakalasanız fena olmaz mıydı?" />
+  <meta name="twitter:image" content="https://antalya.js.org/javascript-antalya.png">
+</head>
+<body>
+
+<header>
+  <div class="title">
+      <p><a href="/">JSAntalya</a></p>
+    <hr>
+    <h1>React 16'da </h1>
+    <hr>
+    <p>Hata Yakalamak</p>
+  </div>
+</header>
+
+
+<section id="about">
+<div class="container">
+<div class="six columns">
+  <h1>
+    React 16<br>
+    Nedir ?
+  </h1>
+  <hr>
+  <strong><a target="_blank" title="Mehmet Köse" href="https://mehmetkose.com.tr">Mehmet Köse</a></strong>
+</div>
+<div class="six columns">
+  <p>
+    React'ın 16.versiyonu, 2017 yılı içinde yayınlandı, 
+    bu yazının hazırlandığı günlerde (Ağustos 2019) 16.8.6 sürümü mevcut. 
+    React 16 geriye dönük destek sunmakla birlikte bir çok yenilikle geldi ve 
+    günümüzde de geliştiricilerin adapte olma süreci devam etmektedir.
+  </p>
+</div>
+</section>
+
+
+
+<section id="sectionfour">
+  <div class="container">
+    <div class="twelve columns">
+          <h1>React 16'da Hata Yakalamak</h1>
+          <hr>
+          <h2><strong>Neden İhtiyaç?</strong></h2>
+          <p>React bir UI kütüphanesi ve UI akışında meydana gelen bir hata aslında uygulamayı <strong>kırmaması</strong> gerekir.</p>
+          <p>
+            Evet yazdığımız kodun düzgün çalışmasından ve hata ayıklama mekanizmalarından biz sorumluyuz, 
+            evet bunun için bizi önceden uyaran yardımcı yazılımlar bile var, fakat hata bu işin doğasında var ve 
+            o hata gerçekleşecek. Bundan emin olabilirsiniz.
+          </p>
+
+          <h2><strong>Error Boundaries</strong></h2>
+
+          <p>
+            React ile gelen mühimmatın adı budur. Artık gerçekleşen hatalar bir lifecycle methoduna düşecek ve tüm uygulamanın patlamasının önüne geçmiş olabileceğiz.
+
+          </p>
+
+          <p>Bu methodun adı <strong>componentDidCatch</strong></p>
+
+          <p>Örneği oynatalım <strong>Uğurcum</strong></p>
+
+          <pre>
+              class HatasizKulOlmaz extends React.Component {
+                constructor(props) {
+                  super(props);
+                  this.state = { hataVar: false };
+                }
+              
+                componentDidCatch(error, info) {
+                  // Hatayı set eyle
+                  this.setState({ hataVar: true });
+                  // Ayrıca sunucunuza veya bir monitör servisine bunu loglayabilirsiniz
+                  hatayıLogla(error, info);
+                }
+              
+                render() {
+                  if (this.state.hataVar) {
+                    // Isterseniz hataya bağlı özel bir mesaj gösterebilirsiniz
+                    return <h1>Something went wrong.</h1>;
+                  }
+                  return this.props.children;
+                }
+              }
+          </pre>
+
+          <p>
+            Aslında lafı çok da dolandırmaya gerek yoktu. Örnek her şeyi anlatıyor. 
+            Dikkatinizi çekmesi gereken nokta ise, bu component tüm <strong>Component Tree</strong>
+            içinde gerçekleşen hataları yakalayabiliyor. 
+            Yani bunu örneğin <strong>app.js</strong>içinde kbir wrapper olarak kullanıp tüm hataları yakalayabilirsiniz.
+          </p>
+
+          <pre>
+              <HatasizKulOlmaz>
+                <Liste />
+              </HatasizKulOlmaz>
+          </pre>
+
+
+          <p>Bir sonraki yazıda görüşmek üzere.</p>
+
+
+          <h3>Kaynaklar:</h3>
+          <ul>
+            <li><a href="https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html">Error Handling in React 16</a></li>
+                     
+          </ul>
+      
+        </div>
+
+    </div>
+</section>
+
+
+
+<footer>
+  <div class="row">
+    <div class="container">
+      <div class="four columns">
+        <h2>CONTACT US</h2>
+        <p><em>null</em></p>
+        <hr>
+      </div>
+      <div class="four columns">
+        <h2>OPENING TIMES</h2>
+        <p><em>null</em></p>
+        <hr>
+        
+        </div>
+      <div class="four columns">
+        <h2>SOCIAL MEDIA</h2>
+        <p><em>Follow Us</em></p>
+        <hr>
+        <p>
+         null</p>
+      </div>
+    </div>
+  </div>
+</footer>
+  
+</body>
+</html>
