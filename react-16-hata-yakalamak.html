@@ -98,7 +98,7 @@
                 render() {
                   if (this.state.hataVar) {
                     // Isterseniz hataya bağlı özel bir mesaj gösterebilirsiniz
-                    return <h1>Something went wrong.</h1>;
+                    return <div>Something went wrong.</div>;
                   }
                   return this.props.children;
                 }
@@ -113,7 +113,7 @@
             alt componentlarda gerçekleşen tüm hataları da yakalayabilirsiniz.
           </p>
 
-          <pre><code></code>
+          <pre><code>
               <HatasizKulOlmaz>
                 <Liste />
               </HatasizKulOlmaz>
