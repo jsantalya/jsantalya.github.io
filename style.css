@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Fjalla+One|Playfair+Display';
+@import url('https://cdn.jsdelivr.net/npm/inter-ui@3.12.0/inter.min.css');
 
 /* ------------------------------------------------------------------ */
 /* Base
@@ -6,7 +6,7 @@
 
 body {
   background: #ffffff;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Inter', serif;
   margin: 0;
 }
 
